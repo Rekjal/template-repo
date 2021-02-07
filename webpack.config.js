@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -12,6 +13,7 @@ module.exports = {
     contentBase: './dist'      // new line
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Salim Mayan',
       template: './src/index.html',
